@@ -1,0 +1,87 @@
+<div class="header agent-nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12">
+                <div class="header-content">
+                    <div class="header-left">
+                        <div class="brand-logo">
+                            <a href="/agent/home">
+                                <span>openDTT</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                        <div class="dark-light-toggle" onclick="themeToggle()">
+                            <span class="dark"><i class="icofont-moon"></i></span>
+                            <span class="light"><i class="icofont-sun-alt"></i></span>
+                        </div>
+                        <div class="notification dropdown">
+                            <div class="notify-bell" data-toggle="dropdown">
+                                <span><i class="icofont-alarm"></i></span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-right notification-list">
+                                <h4>Announcements</h4>
+                                <div class="lists">
+                                    <a href="#" class="">
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-3 icon success"><i class="icofont-check"></i></span>
+                                            <div>
+                                                <p>Accessing a demo application</p>
+                                                <span>2020-11-04 12:00:23</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile_log dropdown">
+                            <div class="user" data-toggle="dropdown">
+                                <span class="thumb"><img src="https://img.icons8.com/ios-filled/50/000000/name.png" alt=""></span>
+                                <span class="arrow"><i class="icofont-angle-down"></i></span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="user-email">
+                                    <div class="user">
+                                        <span class="thumb"><img src="https://img.icons8.com/ios-filled/50/000000/name.png" alt=""></span>
+                                        <div class="user-info">
+                                            <h5><%- agent != null ? agent : 'User' %></h5>
+                                        </div>
+                                    </div>
+                                    <div class="user">
+                                        <span class="thumb"><img src="https://img.icons8.com/ios-filled/50/000000/apple-phone.png" alt=""></span>                                        
+                                        <div class="user-info">
+                                            <h5><%- msisdn != null ? msisdn : 'User' %></h5>
+                                        </div>
+                                    </div>
+                                    <div class="user">
+                                        <span class="thumb"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-question-frequently-asked-questions-faq-bearicons-glyph-bearicons-4.png"/></span>                                        
+                                        <div class="user-info">
+                                            <h5>FAQ</h5>
+                                        </div>
+                                    </div>
+                                    <div class="user">
+                                        <span class="thumb"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-email-advertising-kiranshastry-solid-kiranshastry-1.png"/></span>                                        
+                                        <div class="user-info">
+                                            <h5>Support</h5>
+                                        </div>
+                                    </div>
+                                    <div class="user">
+                                        <span class="thumb"><img src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-edit-mintab-for-ios-becris-lineal-becris.png"/></span>                                        
+                                        <a href="/agent/reset-pin"><div class="user-info">
+                                            <h5>Reset PIN</h5>
+                                        </div></a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "koa_jobs_portal",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "secret": "EGY5645GDGHG",
+    "operatorsAliases": false
+  },
+  "ydplatform_urls":{
+    "login": "https://api.ydplatform.com/api/Login",
+    "subscribe": "https://api.ydplatform.com/api/Subscribe",
+    "status": "https://api.ydplatform.com/api/CheckUserState"
+  },
+  "Lucky_Number": {
+    "service_id": 9,
+    "password": "CFFKuHpMcybEtVV1977ZaMU"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}

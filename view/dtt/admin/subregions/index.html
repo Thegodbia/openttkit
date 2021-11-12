@@ -1,0 +1,155 @@
+<div class="card-body">
+    <div class="row">
+        <div class="col-xxl-12">
+            <div class="card">
+                <div class="card-header px-0">
+                    <h4 class="card-title">Sub Regions </h4>
+                </div>
+                <div class="card-body px-0">
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#addSubRegion">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body px-0">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Region</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <% if (subregions.length) {%>
+                                <tbody>
+                                    <% for(let r of subregions)  {%>
+                                <tr>
+                                    <td><%- (r.sub_region_name != null ) ? r.sub_region_name : '' %></td>
+                                    <td><%- (r.region_name != null ) ? r.region_name : '' %></td>
+                                    <td>
+                                        <a href="#"><span class="btn btn-primary"><i class="icofont-edit"></i></span></a>
+                                        <a href="#"><span class="btn btn-danger"><i class="icofont-close-line"></i></span></a>
+                                    </td>
+                                </tr>
+                                <%}%>
+                            </tbody>
+                            <%}%>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Modal sub region form-->
+<div class="modal fade" id="addSubRegion" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCardLabel">Add Sub-Region</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" class="identity-upload" action="#" id="add-subregion">
+                    <div class="response"></div>
+                    <div class="row g-3">
+                        <div class="col-xl-12">
+                            <label class="form-label">Name </label>
+                            <input type="text" name="subregion" class="form-control region" placeholder="e.g. Lagos">
+                        </div>
+                        <div class="col-xl-12">
+                            <label class="form-label">region </label>
+                            <select name="region" class="form-select region" required>
+                                <option value="">select region</option>
+                                <%if (region.length > 0) {%>
+                                    <% for(let e of region) {%>
+                                        <option value="<%= e.id %>"><%= e.name%></option>
+                                    <%}%>
+                                <%}%>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successRegionCard" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-form">
+                    <div class="card-body">
+                        <div class="identity-content">
+                            <span class="icon"><i class="icofont-check"></i></span>
+                            <p class="text-dark">Success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---confirm delete-->
+<!-- Modal -->
+<div class="modal fade" id="delRegion" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitDelete">yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--EDIT region form-->
+<div class="modal fade" id="editregion" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCardLabel">Add Region</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" class="identity-upload" action="#" id="edit-region">
+                    <div class="response"></div>
+                    <div class="row g-3">
+                    
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitRegion">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

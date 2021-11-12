@@ -1,0 +1,150 @@
+<div class="card-body">
+    <div class="row">
+        <div class="col-xxl-12">
+            <div class="card">
+                <div class="card-header px-0">
+                    <h4 class="card-title">Whitelist </h4>
+                </div>
+                <div class="card-body px-0">
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#addWhitelist">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body px-0">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Region</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <% if (whitelisted.length) {%>
+                                <tbody>
+                                    <% for(let r of whitelisted)  {%>
+                                <tr>
+                                    <td><%- (r.msisdn != null ) ? r.msisdn : '' %></td>
+                                    <td><%- (r.sub_region_name != null ) ? r.sub_region_name : '' %></td>
+                                    <td>
+                                        <button class="btn btn-primary" value="<%- (r.id != null ) ? r.id : '' %>" id="editWhitelist"><i class="icofont-edit"></i></button>
+                                        <button class="btn btn-danger" value="<%- (r.id != null ) ? r.id : '' %>" id="deleteWhitelist"><i class="icofont-close-line"></i></button>
+                                    </td>
+                                </tr>
+                                <%}%>
+                            </tbody>
+                            <%}%>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- Modal whitelisting form-->
+<div class="modal fade" id="addWhitelist" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCardLabel">Whitelist</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" class="identity-upload" action="#" id="whitelist-add">
+                    <div class="response"></div>
+                    <div class="row g-3">
+                        <div class="col-xl-12">
+                            <label class="form-label">Name </label>
+                            <input type="tel" name="msisdn" class="form-control msisdn" placeholder="e.g. 0703XXXXXXX">
+                        </div>
+                        <div class="col-xl-12">
+                            <label class="form-label">subregion </label>
+                            <select name="subregion" class="form-select subregion" required>
+                                <option value="">select subregion</option>
+                                <%if (subregion.length > 0) {%>
+                                    <% for(let e of subregion) {%>
+                                        <option value="<%= e.id %>"><%= e.name%></option>
+                                    <%}%>
+                                <%}%>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successRegionCard" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-form">
+                    <div class="card-body">
+                        <div class="identity-content">
+                            <span class="icon"><i class="icofont-check"></i></span>
+                            <p class="text-dark">Success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--EDIT whitelist form-->
+<div class="modal fade" id="editwhitelist" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCardLabel">Edit</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" class="identity-upload" action="#" id="edit-region">
+                    <div class="response"></div>
+                    <div class="row g-3">
+                        <div class="col-xl-12 inputmsisdn">
+
+                        </div>
+                        <div class="col-xl-12">
+                            <label class="form-label">subregion </label>
+                            <select name="subregion" class="form-select subregion" required>
+                                <option default>select subregion</option>
+                                <%if (subregion.length > 0) {%>
+                                    <% for(let e of subregion) {%>
+                                        <option value="<%= e.id %>"><%= e.name%></option>
+                                    <%}%>
+                                <%}%>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitRegion">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

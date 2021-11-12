@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Digital Trading Toolkit - Authentication</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Digital Trading Toolkit" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="dtt/css/style.css">
+</head>
+
+
+<body>
+
+<div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+
+<div id="main-wrapper">
+    <div class="header landing">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <nav class="navbar">
+                        <div class="brand-logo">
+                            <a href="/">
+                                <!--<img src="images/logo.png" alt="">-->
+                                <span>openDTT</span>
+                            </a>
+                     </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="authincation section-padding">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-xl-5 col-md-6">
+                <div class="mini-logo text-center my-4">
+                    <!--<a href="intro.html"><img src="images/logo.png" alt=""></a>-->
+                    <h4 class="card-title mt-3">Create your account</h4>
+                </div>
+                <div class="auth-form card">
+                    <div class="card-body">
+                        <form method="post" name="myform" class="signin_validate row g-3"
+                            action="" id="register-form">
+                            <div class="response"></div>
+                            <div class="col-12">
+                                <input type="text" class="form-control first" placeholder="First name" name="first" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control last" placeholder="Last name" name="last" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="tel" class="form-control msisdn" placeholder="MTN phone number - 0703XXXXXXX"
+                                    name="msisdn" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="password" class="form-control password" placeholder="4 digit PIN ex. 1234"
+                                    name="password" required>
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select state" name="state" required>
+                                    <option value="">Select state of residence</option>
+                                    <option value="ABUJA">ABUJA FCT</option>
+                                    <option value="ABIA">ABIA</option>
+                                    <option value="ADAMAWA">ADAMAWA</option>
+                                    <option value="AKWA IBOM">AKWA IBOM</option>
+                                    <option value="ANAMBRA">ANAMBRA</option>
+                                    <option value="BAUCHI">BAUCHI</option>
+                                    <option value="BAYELSA">BAYELSA</option>
+                                    <option value="BENUE">BENUE</option>
+                                    <option value="BORNO">BORNO</option>
+                                    <option value="CROSS RIVER">CROSS RIVER</option>
+                                    <option value="DELTA">DELTA</option>
+                                    <option value="EBONYI">EBONYI</option>
+                                    <option value="EDO">EDO</option>
+                                    <option value="EKITI">EKITI</option>
+                                    <option value="ENUGU">ENUGU</option>
+                                    <option value="GOMBE">GOMBE</option>
+                                    <option value="IMO">IMO</option>
+                                    <option value="JIGAWA">JIGAWA</option>
+                                    <option value="KADUNA">KADUNA</option>
+                                    <option value="KANO">KANO</option>
+                                    <option value="KATSINA">KATSINA</option>
+                                    <option value="KEBBI">KEBBI</option>
+                                    <option value="KOGI">KOGI</option>
+                                    <option value="KWARA">KWARA</option>
+                                    <option value="LAGOS">LAGOS</option>
+                                    <option value="NASSARAWA">NASSARAWA</option>
+                                    <option value="NIGER">NIGER</option>
+                                    <option value="OGUN">OGUN</option>
+                                    <option value="ONDO">ONDO</option>
+                                    <option value="OSUN">OSUN</option>
+                                    <option value="OYO">OYO</option>
+                                    <option value="PLATEAU">PLATEAU</option>
+                                    <option value="RIVERS">RIVERS</option>
+                                    <option value="SOKOTO">SOKOTO</option>
+                                    <option value="TARABA">TARABA</option>
+                                    <option value="YOBE">YOBE</option>
+                                    <option value="ZAMFARA">ZAMFARA</option>
+                                </select>
+                            </div>
+                            <!--<div class="col-12">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                                        I agree to the <a
+                                            href="#" class="text-primary">User Agreement</a> and <a href="#"
+                                            class="text-primary">Privacy Policy</a>.
+                                    </label>
+                                </div>
+                            </div>-->
+
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary btn-block" id="submit" >Create account</button>
+                            </div>
+                        </form>
+                        <div class="text-center">
+                            <p class="mt-3 mb-0 float-left"> <a class="text-primary" href="/reset-pin">reset</a> your PIN</p>
+                            <p class="mt-3 mb-0 float-right"> <a class="text-primary" href="/sign-in">Sign in</a> to your
+                                account</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/dtt/vendor/jquery/jquery.min.js"></script>
+<script src="/dtt/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--<script src="/dtt/vendor/feather/feather.min.html"></script>-->
+<script src="/dtt/js/script.js"></script>
+<script src="/dtt/js/register.js"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

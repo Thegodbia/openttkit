@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Digital Trading Toolkit - Authentication</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Digital Trading Toolkit" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="dtt/css/style.css">
+</head>
+
+
+<body>
+
+<div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+
+<div id="main-wrapper">
+    <div class="header landing">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <nav class="navbar">
+                        <div class="brand-logo">
+                            <a href="/">
+                                <!--<img src="images/logo.png" alt="">-->
+                                <span>openDTT</span>
+                            </a>
+                     </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="authincation section-padding">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-xl-5 col-md-6">
+                <div class="mini-logo text-center my-3">
+                    <!--<a href="intro.html"><img src="images/logo.png" alt=""></a>-->
+                    <h4 class="card-title mt-3">Verification</h4>
+                </div>
+                <div class="auth-form card">
+                    <div class="card-body">
+                        <p class="text-center mb-3">Enter verification code sent to your phone number *******<%=last4%>.</p>
+                        <form method="post" action="" class="row g-3" id="verify-form">
+                            <div class="response"></div>
+                            <div class="col-12">
+                                <label class="form-label">code</label>
+                                <div class="input-group">
+                                    <input type="text" name="code" class="form-control code" placeholder="ex. 123456">
+                                </div>
+                                <div class="input-group">
+                                    <input type="hidden" name="clp" class="form-control clp" value="<%=clp%>">
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button type="button" class="btn btn-primary btn-block" id="submit">verify</button>
+                            </div>
+                        </form>
+                        <div class="new-account mt-3">
+                            <p>Didn't get code? 
+                                <form method="post" action=""  id="resend-form">
+                                    <div class="input-group">
+                                        <input type="hidden" name="clp" class="form-control clp" value="<%=clp%>">
+                                    </div>
+                                    <div class="mt-4">
+                                        <button type="button" class="btn btn-primary" id="resendsubmit">Resend</button>
+                                    </div>
+                                </form>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/dtt/vendor/jquery/jquery.min.js"></script>
+<script src="/dtt/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--<script src="/dtt/vendor/feather/feather.min.html"></script>-->
+<script src="/dtt/js/script.js"></script>
+<script src="/dtt/js/verify.js"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

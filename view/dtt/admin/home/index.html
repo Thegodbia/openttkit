@@ -1,0 +1,74 @@
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                <div class="wallet-widget card">
+                    <h5>Subscription Requests</h5>
+                    <h2><span class="text-primary"><%= dash.request %></span></h2>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                <div class="wallet-widget card">
+                    <h5>Conversions</h5>
+                    <h2><span class="text-success"><%= dash.conversion_count %></span></h2>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                <div class="wallet-widget card">
+                    <h5>Conversion Value</h5>
+                    <h2><span class="text-warning"><%= dash.conversion %>.00</span> <sub>NGN</sub></h2>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                <div class="wallet-widget card">
+                    <h5>Commission</h5>
+                    <h2><span class="text-danger"><%= dash.commission %>.00</span> <sub>NGN</sub></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+    
+            <div class="col-xxl-8 col-xl-8">
+                <div class="card home-chart">
+                    <div class="card-header">
+                        <h4 class="card-title home-chart">10 days</h4>
+                        <select class="form-select" name="report-type" id="report-select">
+                            <option value="1">Conversion</option>
+                        </select>
+
+                    </div>
+                    <div class="card-body">
+                        <div class=" home-chart-height">
+                            <canvas id="adminchartx"></canvas>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Top 5 Agents (5days)</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="balance-widget trade-balance">
+                            <%if (dash.top5.length > 0) {%>
+                                <% for(let e of dash.top5) {%>
+                            <li>
+                                <h5><%= e.msisdn%></h5>
+                                <div class="text-right">
+                                    <h5>NGN<%= e.commission%>.00</h5>
+                                    <span>commission</span>
+                                </div>
+                            </li>
+                                <%}%>
+                            <%}%>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

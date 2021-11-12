@@ -1,0 +1,144 @@
+<div class="card-body">
+    <div class="row">
+        <div class="col-xxl-12">
+            <div class="card">
+                <div class="card-header px-0">
+                    <h4 class="card-title">Services </h4>
+                </div>
+                <div class="card-body px-0">
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#addService">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body px-0">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Product ID</th>
+                                    <th>Aggregator ID</th>
+                                    <th>Cost</th>
+                                </tr>
+                            </thead>
+                            <% if (services.length) {%>
+                                <tbody>
+                                    <% for(let r of services)  {%>
+                                <tr>
+                                    <td><%- (r.name != null ) ? r.name : '' %></td>
+                                    <td><%- (r.product_id != null ) ? r.product_id : '' %></td>
+                                    <td><%- (r.agg_sid != null ) ? r.agg_sid : '' %></td>
+                                    <td><%- (r.cost != null ) ? r.cost : '' %></td>
+                                    <td>
+                                        <button class="btn btn-primary" value="<%- (r.id != null ) ? r.id : '' %>" id="editService"><i class="icofont-edit"></i></button>
+                                        <button class="btn btn-danger" value="<%- (r.id != null ) ? r.id : '' %>" id="deleteService"><i class="icofont-close-line"></i></button>
+                                    </td>
+                                </tr>
+                                <%}%>
+                            </tbody>
+                            <%}%>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- Modal service form-->
+<div class="modal fade" id="addService" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCardLabel">Add Service</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" class="identity-upload" action="#" id="add-service">
+                    <div class="response"></div>
+                    <div class="row g-3">
+                        <div class="col-xl-12">
+                            <label class="form-label">Name </label>
+                            <input type="text" name="name" class="form-control name" placeholder="e.g. Lucky Number N10">
+                        </div>
+                        <div class="col-xl-12">
+                            <label class="form-label">Product ID </label>
+                            <input type="text" name="pid" class="form-control pid" placeholder="e.g. 23401220000028917">
+                        </div>
+                        <div class="col-xl-12">
+                            <label class="form-label">Aggregator ID </label>
+                            <input type="text" name="agid" class="form-control agid" placeholder="e.g. 111">
+                        </div>
+                        <div class="col-xl-12">
+                            <label class="form-label">Cost </label>
+                            <input type="text" name="cost" class="form-control cost" placeholder="e.g. 10">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="successRegionCard" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-form">
+                    <div class="card-body">
+                        <div class="identity-content">
+                            <span class="icon"><i class="icofont-check"></i></span>
+                            <p class="text-dark">Success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--EDIT service form-->
+<!-- Modal service form-->
+<div class="modal fade" id="editservice" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCardLabel">Add Service</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" class="identity-upload" action="#" id="edit-service">
+                    <div class="response"></div>
+                    <div class="row g-3">
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12 col-xl-12 col-lg-12">
+                <div class="card">
+                    <div class="card-body invite-card">
+                        <div class="invite-content">
+                            <!--<h4>You can also subscribe Users through the link</h4>
+                            <p>You can do the following：
+                                1. Send the link via SMS by clicking the button and inputing the User's phone number
+                                2. You can copy and share the link directly with your friends and family</a>
+                            </p>
+
+                            <div class="copy-link">
+                                <form action="#">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control"
+                                            value="https://www.dtt.io/subscribe/{agent-id}}">
+                                        <span class="input-group-text">Send</span>
+                                    </div>
+                                </form>
+                            </div>-->
+
+                            <!-- <div class="social-share-link">
+                                <a href="#"><span><i class="icofont-facebook"></i></span></a>
+                                <a href="#"><span><i class="icofont-twitter"></i></span></a>
+                                <a href="#"><span><i class="icofont-whatsapp"></i></span></a>
+                                <a href="#"><span><i class="icofont-telegram"></i></span></a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-12 col-xl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"></h4>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="row justify-content-center h-100 align-items-center">
+                            <div class="col-xl-5 col-md-6">
+                                <div class="mini-logo text-center my-3">
+                                    <!--<a href="intro.html"><img src="images/logo.png" alt=""></a>-->
+                                    <h4 class="card-title mt-3">Verification</h4>
+                                </div>
+                                <div class="auth-form card">
+                                    <div class="card-body">
+                                        <p class="text-center mb-3">Enter verification code sent to your phone number *******<%=last4%>.</p>
+                                        <form method="post" action="" class="row g-3" id="verify-form">
+                                            <div class="response"></div>
+                                            <div class="col-12">
+                                                <label class="form-label">code</label>
+                                                <div class="input-group">
+                                                    <input type="text" name="code" class="form-control code" placeholder="ex. 123456">
+                                                </div>
+                                                <div class="input-group">
+                                                    <input type="hidden" name="clp" class="form-control clp" value="<%=clp%>">
+                                                </div>
+                                            </div>
+                                            <div class="text-center mt-4">
+                                                <button type="button" class="btn btn-primary btn-block" id="submit">verify</button>
+                                            </div>
+                                        </form>
+                                        <div class="new-account mt-3">
+                                            <p>Didn't get code? 
+                                                <form method="post" action=""  id="resend-form">
+                                                    <div class="input-group">
+                                                        <input type="hidden" name="clp" class="form-control clp" value="<%=clp%>">
+                                                    </div>
+                                                    <div class="mt-4">
+                                                        <button type="button" class="btn btn-primary" id="resendsubmit">Resend</button>
+                                                    </div>
+                                                </form>
+                                            </p>
+                                        </div>
+                                <div class="privacy-link">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+<script src="/dtt/vendor/jquery/jquery.min.js"></script>
+<script src="/dtt/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="/dtt/vendor/basic-table/jquery.basictable.min.js"></script>
+<script src="/dtt/js/plugins/basic-table-init.js"></script>
+
+
+<!--<script src="/dtt/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="/dtt/js/plugins/perfect-scrollbar-init.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<!--<script type="text/javascript" src="https://www.jsdelivr.com/package/npm/chart.js"></script>-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js" integrity="sha512-5vwN8yor2fFT9pgPS9p9R7AszYaNn0LkQElTXIsZFCL7ucT8zDCAqlQXDdaqgA1mZP47hdvztBMsIoFxq/FyyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="/dtt/vendor/slick/slick.min.js"></script>
+<script src="/dtt/js/plugins/slick-init.js"></script>
+<script src="/dtt/js/script.js"></script>
+<script src="/dtt/js/verify.js"></script>
+
+</body>
+
+</html>

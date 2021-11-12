@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Digital Trading Toolkit - Admin | Configurations</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Digital Trading Toolkit" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" type="text/css" href="/dtt/vendor/slick/slick.css" />
+	<link rel="stylesheet" href="/dtt/css/style.css">
+</head>
+
+
+<body>
+
+	<div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+
+    <div id="main-wrapper">
+    <%- include partials/dtt/admin/_navbar.html %>
+    <%- include partials/dtt/admin/_sidebar.html %>
+    <div class="content-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="settings-menu">
+                                <a href="/admin/settings-region">Region</a>
+                                <a href="/admin/settings-subregion">Sub Region</a>
+                                <a href="/admin/settings-service">Service</a>
+                                <a href="/admin/settings-commission">Commission</a>
+                                <a href="/admin/settings-agent">Agent</a>
+                                <a href="/admin/settings-whitelist">Whitelist</a>
+                            </div>
+                        </div>
+    <%- body %>
+
+	</div>
+	<script src="/dtt/vendor/jquery/jquery.min.js"></script>
+    <script src="/dtt/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/dtt/vendor/basic-table/jquery.basictable.min.js"></script>
+    <script src="/dtt/js/plugins/basic-table-init.js"></script>
+
+
+    <!--<script src="/dtt/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="/dtt/js/plugins/perfect-scrollbar-init.js"></script>-->
+
+    <script src="/dtt/vendor/slick/slick.min.js"></script>
+    <script src="/dtt/js/plugins/slick-init.js"></script>
+    <script src="/dtt/js/scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<div class="card-body">
+    <div class="row">
+        <div class="col-xxl-12">
+            <div class="card">
+                <div class="card-header px-0">
+                    <h4 class="card-title">Agents </h4>
+                </div>
+                <div class="card-body px-0">
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#addAgent">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body px-0">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                    <th>Phone Number</th>
+                                    <th>Region</th>
+                                    <th>Sub Region</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <% if (agents.length) {%>
+                                <tbody>
+                                    <% for(let r of agents)  {%>
+                                <tr>
+                                    <td><%- (r.first != null ) ? r.first : '' %></td>
+                                    <td><%- (r.last != null ) ? r.last : '' %></td>
+                                    <td><%- (r.msisdn != null ) ? r.msisdn : '' %></td>
+                                    <td><%- (r.region != null ) ? r.region : '' %></td>
+                                    <td><%- (r.sub_region != null ) ? r.sub_region : '' %></td>
+                                    <td>
+                                        <a href="#"><span class="btn btn-primary"><i class="icofont-edit"></i></span></a>
+                                        <a href="#"><span class="btn btn-danger"><i class="icofont-close-line"></i></span></a>
+                                    </td>
+                                </tr>
+                                <%}%>
+                            </tbody>
+                            <%}%>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- Modal agent form-->
+<div class="modal fade" id="addAgent" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCardLabel">Add Sub-Region</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" class="identity-upload" action="#" id="add-agent">
+                    <div class="response"></div>
+                    <div class="row g-3">
+                        <div class="col-xl-6 col-sm-3">
+                            <label class="form-label">First name </label>
+                            <input type="text" name="first" class="form-control first" placeholder="e.g. John">
+                        </div>
+                        <div class="col-xl-6 col-sm-3">
+                            <label class="form-label">Last name </label>
+                            <input type="text" name="last" class="form-control last" placeholder="e.g. Doe">
+                        </div>
+                        
+                        <div class="col-xl-6">
+                            <label class="form-label">Phone number </label>
+                            <select name="msisdn" class="form-select msisdn" required>
+                                <option default>select whitelisted msisdn</option>
+                                <%if (whitelisted.length > 0) {%>
+                                    <% for(let e of whitelisted) {%>
+                                        <option value="<%= e.msisdn %>"><%= e.msisdn%></option>
+                                    <%}%>
+                                <%}%>
+                            </select>
+                        </div>
+                        <div class="col-xl-6">
+                            <label class="form-label">password </label>
+                            <input type="password" name="password" class="form-control password" placeholder="e.g. 1234">
+                        </div>
+                        <div class="col-xl-6">
+                            <label class="form-label">role </label>
+                            <select name="role" class="form-select role" required>
+                                <option default>select role</option>
+                                <option value="Agent">Agent</option>
+                                <option value="Supervisor">Supervisor</option>
+                                <option value="Administrator">Administrator</option>
+                            </select>
+                        </div
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="successRegionCard" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-form">
+                    <div class="card-body">
+                        <div class="identity-content">
+                            <span class="icon"><i class="icofont-check"></i></span>
+                            <p class="text-dark">Success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
